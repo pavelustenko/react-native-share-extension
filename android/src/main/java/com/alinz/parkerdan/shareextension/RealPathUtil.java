@@ -146,6 +146,8 @@ public class RealPathUtil {
         } else if (isGoogleNewPhotosUri(uri) || isMMSFile(uri)) {
             // copy from uri. context.getContentResolver().openInputStream(uri);
             return copyFile(context, uri);
+        } else {
+            return copyFile(context, uri);
         }
     }
 
