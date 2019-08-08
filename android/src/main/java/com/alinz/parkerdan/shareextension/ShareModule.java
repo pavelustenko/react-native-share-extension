@@ -51,8 +51,6 @@ public class ShareModule extends ReactContextBaseJavaModule {
         Activity currentActivity = getCurrentActivity();
 
         if (currentActivity != null) {
-            String filepath = Environment.getExternalStorageDirectory().getPath();
-            System.out.println(filepath);
             Intent intent = currentActivity.getIntent();
             action = intent.getAction();
             type = intent.getType();
