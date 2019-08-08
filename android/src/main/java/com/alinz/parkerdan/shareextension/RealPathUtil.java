@@ -73,7 +73,10 @@ public class RealPathUtil {
      }
      // File
      else if ("file".equalsIgnoreCase(uri.getScheme())) {
-         return uri.getPath();
+         String uriPath = uri.getPath();
+         String sdcardPath = Environment.getExternalStorageDirectory().getPath();
+         String out = uriPath.replaceAll("^/sdcard/",sdcardPath+"/");
+         return out;
      }
 
      return null;
